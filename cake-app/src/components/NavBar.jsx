@@ -13,26 +13,9 @@ import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
-    // <nav>
-    //   <div className="logo">
-    //     <Link to="/">
-    //       <h4>Juliecake</h4>
-    //     </Link>
-    //   </div>
-    //   <div className="links">
-    //     <Link to="/" className="nav-link">
-    //       Home
-    //     </Link>
-    //     <Link to="/about" className="nav-link">
-    //       About
-    //     </Link>
-    //     <Link to="/contact" className="nav-link">
-    //       Contact
-    //     </Link>
-    //   </div>
-    // </nav>
+
     <>
-      <AppBar position="sticky" color="white" width="100%">
+      <AppBar position="sticky" color="white" width="100%" sx={{backgroundColor: "white"}} >
         <Toolbar
           sx={{ justifyContent: "space-between", margin: "0 200px 0 200px" }}
         >

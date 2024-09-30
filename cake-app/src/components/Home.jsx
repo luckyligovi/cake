@@ -1,7 +1,13 @@
 import React from "react";
+import cupCake from "../image/black-forest-cuo-cake.jpg";
+import blackForest from "../image/black-forest.jpeg";
+import weddingCake from "../image/wedding-cake.jpeg";
+import graduationCake from "../image/graduation.jpeg";
+import Footer from "./Footer";
 
 export default function Home() {
   return (
+    <div>
     <div className="home-ciontainer">
       <div
         style={{
@@ -22,43 +28,41 @@ export default function Home() {
           </h6>
         </div>
       </div>
-      <div>
-        <h2 style={{ textAlign: "center" }}>Popular cake categories</h2>
-        <div style={{ display: "flex", flexDirection: "row", flexWrap:"wrap",justifyContent:"center",gap:"10px"}}>
+      <div className="category-container">
+        <h1 style={{marginBottom:"50px"}} >POPULAR CATEGORIES</h1>
+        <div className="categories">
           <div>
             <img
               className="category-images"
-              src="https://static01.nyt.com/images/2020/01/15/dining/ss-black-forest-cake/merlin_165684495_6689b1a0-42b5-4228-b871-37bb983d797e-superJumbo.jpg"
+              src={blackForest}
               alt="Black Forest Cake"
             />
-            <h1 style={{ textAlign: "center" }}>black forest</h1>
+            <h3>Black forest</h3>
           </div>
           <div>
             <img
               className="category-images"
-              src="https://static01.nyt.com/images/2020/01/15/dining/ss-black-forest-cake/merlin_165684495_6689b1a0-42b5-4228-b871-37bb983d797e-superJumbo.jpg"
+              src={graduationCake}
               alt="Black Forest Cake"
             />
-            <h1 style={{ textAlign: "center" }}>graduation cake</h1>
+            <h3>graduation cake</h3>
+          </div>
+          <div>
+            <img className="category-images" src={cupCake} alt="cup-cake" />
+            <h3>Cup cake</h3>
           </div>
           <div>
             <img
               className="category-images"
-              src="https://static01.nyt.com/images/2020/01/15/dining/ss-black-forest-cake/merlin_165684495_6689b1a0-42b5-4228-b871-37bb983d797e-superJumbo.jpg"
-              alt="cup-cake"
+              src={weddingCake}
+              alt="Black Forest Cake"
             />
-            <h1 style={{ textAlign: "center" }}>cup cake</h1>
+            <h3>weeding</h3>
           </div>
-          <div>
-         <img className="category-images"
-            src="https://static01.nyt.com/images/2020/01/15/dining/ss-black-forest-cake/merlin_165684495_6689b1a0-42b5-4228-b871-37bb983d797e-superJumbo.jpg"
-            alt="Black Forest Cake"
-          />
-          <h1 style={{textAlign:"center"}}>black forest</h1>
-         </div>
-         
         </div>
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 }
