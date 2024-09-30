@@ -86,3 +86,11 @@
   align-items: center;
 
 }
+
+.infor-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 9rem;
+}
