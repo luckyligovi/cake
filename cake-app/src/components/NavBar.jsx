@@ -35,7 +35,7 @@ export default function NavBar() {
             </Button>
             <Button>
               <Link className="nav-link" to="/contact">
-                Contact
+                Contact Us 
               </Link>
             </Button>
             <Button>

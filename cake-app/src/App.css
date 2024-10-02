@@ -1,3 +1,6 @@
+body{
+  background-color: #f5f5f5;
+}
 /* NavNar */
 
 .links {
@@ -55,11 +58,17 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 100px;
-  max-width: 2500px;
+  max-width: 1500px;
   justify-content: space-between;
   margin-top: 200px;
   /* background-color: aqua; */
   /* padding-left: 20px; */
+}
+
+
+.links{
+  text-decoration: none;
+  color: black;
 }
 
 /* .company-info{
@@ -78,9 +87,10 @@
 
 /* About */
 .about-background{
-  background-image: url(./image/cake-variety.jpg);
+  background-image: url(./image/types-of-cake-18-jpg.jpg);
   height: 700px;
-  background-size: contain;
+  background-size: cover;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,6 +101,45 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 1rem;
+  gap: 5rem;
   margin-top: 9rem;
+}
+
+.offers-container{
+  margin: 200px auto 0 auto;
+  text-align: center;
+}
+
+.offer-item{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+.offer1{
+  background-image: url(./image/offer-cake-1.jpeg);
+  background-size: cover;
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+  align-items: flex-end;
+}
+.offer2{
+  background-image: url(./image/offer-cake-2.jpeg);
+  background-size: cover;
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+}
+
+/* contact css */
+.contact-background{
+  background-image: url(./image/contact-us.jpg);
+  height: 700px;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

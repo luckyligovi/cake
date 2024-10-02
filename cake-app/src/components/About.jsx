@@ -1,5 +1,7 @@
 import React from "react";
 import cakeTypes from "../image/types-of-cake-18-jpg.jpg";
+import Footer from "./Footer";
+import Offers from "./Offers";
 
 export default function About() {
   return (
@@ -11,7 +13,7 @@ export default function About() {
         <img
           src={cakeTypes}
           alt="cake-types"
-          style={{ width: "300px", height: "auto" ,borderRadius:"20px" }}
+          style={{ width: "300px", height: "auto", borderRadius: "20px" }}
         />
         <div>
           <h1>Lorem, ipsum dolor.</h1>
@@ -21,6 +23,8 @@ export default function About() {
           </p>
         </div>
       </div>
+      <Offers />
+      <Footer />
     </div>
   );
 }

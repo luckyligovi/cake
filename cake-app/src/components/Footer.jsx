@@ -1,44 +1,41 @@
 import React from "react";
-import cakeLogo from "../image/cake-logo.jpeg"
-
+import cakeLogo from "../image/cake-logo.jpeg";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="footer">
-      <div className="company-info" >
-        <img src={cakeLogo} alt="logo"/>
-        <p>
-          We aimed to offer Nairobi smokers with alternatives. Our brand
-          presents top-tier devices sourced globally, a <br />
-          delectable array of flavors, a distinct customer service approach, all
-          at an exceptionally friendly price point.
-        </p>
-      </div>
+    <div>
+      <div className="footer">
+        <div className="company-info">
+          <img src={cakeLogo} alt="logo" />
+          <p style={{maxWidth:"500px"}}>
+            We aimed to offer Nairobi smokers with alternatives. Our brand
+            presents top-tier devices sourced globally, a 
+            delectable array of flavors, a distinct customer service approach,
+            all at an exceptionally friendly price point.
+          </p>
+        </div>
 
-      <div className="products">
-        <h2>PRODUCTS</h2>
-        <h6>Wedding cakes</h6>
-        <h6>Wedding cakes</h6>
-        <h6>Wedding cakes</h6>
-        <h6>Wedding cakes</h6>
-        <h6>Wedding cakes</h6>
+        <div className="products">
+          <h2>PRODUCTS</h2>
+          <p>black forest</p>
+          <p>Wedding cakes</p>
+          <p>Cup cakes</p>
+        </div>
+        <div className="company">
+          <h2>Company</h2>
+          <p> <Link className="links" to="/about">About us</Link> </p>
+          <p> <Link className="links" to="/contact" >Contact us</Link> </p>
+        </div>
+        <div className="contact">
+          <h2>Contact</h2>
+          <p>@ligovilucky.gmail.com</p>
+          <p>+254 798645012</p>
+          <p>Utawala</p>
+          
+        </div>
       </div>
-      <div className="company">
-        <h2>Company</h2>
-        <h6>Wedding cakes</h6>
-        <h6>Wedding cakes</h6>
-        <h6>Wedding cakes</h6>
-        <h6>Wedding cakes</h6>
-        <h6>Wedding cakes</h6>
-      </div>
-      <div className="contact" >
-        <h2>Contact</h2>
-        <h6>Wedding cakes</h6>
-        <h6>Wedding cakes</h6>
-        <h6>Wedding cakes</h6>
-        <h6>Wedding cakes</h6>
-        <h6>Wedding cakes</h6>
-      </div>
+      <hr />
     </div>
   );
 }
