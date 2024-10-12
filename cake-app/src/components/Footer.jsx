@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div>
+    <div style={{marginTop:"100px"}}>
+      <hr style={{maxWidth:"1500px"}} />
       <div className="footer">
         <div className="company-info">
           <img src={cakeLogo} alt="logo" />

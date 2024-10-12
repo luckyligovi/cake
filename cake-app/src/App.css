@@ -68,7 +68,6 @@ body{
   /* gap: 0px; */
   max-width: 1500px;
   justify-content: space-between;
-  margin-top: 200px;
   padding: 20px;
   /* background-color: aqua; */
   /* padding-left: 20px; */
@@ -162,4 +161,24 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/* whatsapp button */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366; 
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.whatsapp-button:hover {
+  background-color: #128c7e; 
 }
