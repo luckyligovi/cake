@@ -43,7 +43,15 @@ body{
   background-size: cover;
   border-radius: 20px;
 }
-
+/* @media only screen and (max-width: 600px) {
+  .background-image{
+    max-width: 300px;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+  }
+} */
+/* categories */
 .category-images{
   width: 300px;
   height: 400px;
@@ -57,18 +65,30 @@ body{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 100px;
+  /* gap: 0px; */
   max-width: 1500px;
   justify-content: space-between;
   margin-top: 200px;
+  padding: 20px;
   /* background-color: aqua; */
   /* padding-left: 20px; */
+}
+@media only screen and (max-width: 600px) {
+  .footer{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
 }
 
 
 .links{
   text-decoration: none;
   color: black;
+}
+
+.links:hover{
+  background-color:rgb(234, 225, 210);
 }
 
 /* .company-info{
