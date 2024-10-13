@@ -32,8 +32,8 @@ export default function Products() {
           <Typography gutterBottom variant="h5" component="div">
             black forest
           </Typography>
-          <Typography variant="body2" sx={{ color: "text.secondary" }}>
-            black forest chock
+          <Typography variant="h6" sx={{ color: "text.secondary" }}>
+            KSHs 1,200
           </Typography>
         </CardContent>
         <CardActions sx={{ color: "black" }}>
@@ -98,8 +98,8 @@ export default function Products() {
           <Typography gutterBottom variant="h5" component="div">
             black forest
           </Typography>
-          <Typography variant="body2" sx={{ color: "text.secondary" }}>
-            black forest chock
+          <Typography variant="h6" sx={{ color: "text.secondary" }}>
+            KSHs 1,200
           </Typography>
         </CardContent>
         <CardActions sx={{ color: "black" }}>
@@ -131,8 +131,8 @@ export default function Products() {
           <Typography gutterBottom variant="h5" component="div">
             black forest
           </Typography>
-          <Typography variant="body2" sx={{ color: "text.secondary" }}>
-            black forest chock
+          <Typography variant="h6" sx={{ color: "text.secondary" }}>
+            KSHs 1,200
           </Typography>
         </CardContent>
         <CardActions sx={{ color: "black" }}>
@@ -164,8 +164,8 @@ export default function Products() {
           <Typography gutterBottom variant="h5" component="div">
             black forest
           </Typography>
-          <Typography variant="body2" sx={{ color: "text.secondary" }}>
-            black forest chock
+          <Typography variant="h6" sx={{ color: "text.secondary" }}>
+            KSHs 1,200
           </Typography>
         </CardContent>
         <CardActions sx={{ color: "black" }}>
@@ -197,8 +197,8 @@ export default function Products() {
           <Typography gutterBottom variant="h5" component="div">
             black forest
           </Typography>
-          <Typography variant="body2" sx={{ color: "text.secondary" }}>
-            black forest chock
+          <Typography variant="h6" sx={{ color: "text.secondary" }}>
+            KSHs 1,200
           </Typography>
         </CardContent>
         <CardActions sx={{ color: "black" }}>
@@ -230,8 +230,8 @@ export default function Products() {
           <Typography gutterBottom variant="h5" component="div">
             black forest
           </Typography>
-          <Typography variant="body2" sx={{ color: "text.secondary" }}>
-            black forest chock
+          <Typography variant="h6" sx={{ color: "text.secondary" }}>
+            KSHs 1,200
           </Typography>
         </CardContent>
         <CardActions sx={{ color: "black" }}>
@@ -263,8 +263,8 @@ export default function Products() {
           <Typography gutterBottom variant="h5" component="div">
             black forest
           </Typography>
-          <Typography variant="body2" sx={{ color: "text.secondary" }}>
-            black forest chock
+          <Typography variant="h6" sx={{ color: "text.secondary" }}>
+            KSHs 1,200
           </Typography>
         </CardContent>
         <CardActions sx={{ color: "black" }}>
@@ -296,8 +296,8 @@ export default function Products() {
           <Typography gutterBottom variant="h5" component="div">
             black forest
           </Typography>
-          <Typography variant="body2" sx={{ color: "text.secondary" }}>
-            black forest chock
+          <Typography variant="h6" sx={{ color: "text.secondary" }}>
+            KSHs 1,200
           </Typography>
         </CardContent>
         <CardActions sx={{ color: "black" }}>

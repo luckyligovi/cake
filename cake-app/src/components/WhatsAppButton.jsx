@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 export default function WhatsAppButton() {
   return (
     <a
-    href="https://wa.me/your-phone-number" // Add your WhatsApp link here
+    href="https://wa.me/+254798645012" // Add your WhatsApp link here
     target="_blank"
     rel="noopener noreferrer"
     className="whatsapp-button"

@@ -1,11 +1,13 @@
 import React from "react";
 import cakeLogo from "../image/cake-logo.jpeg";
 import { Link } from "react-router-dom";
+import SocialMediaIcons from "./SocialMediaIcons";
 
 export default function Footer() {
   return (
     <div style={{marginTop:"100px"}}>
       <hr style={{maxWidth:"1500px"}} />
+      <SocialMediaIcons/>
       <div className="footer">
         <div className="company-info">
           <img src={cakeLogo} alt="logo" />

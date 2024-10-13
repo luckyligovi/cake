@@ -90,21 +90,7 @@ body{
   background-color:rgb(234, 225, 210);
 }
 
-/* .company-info{
-  flex-grow: 2;
-}
-.products{
-  flex-grow: 1;
-}
-.company{
-  flex-grow: 3;
-}
-.contact{
-  flex-grow: 5;
-} */
 
-
-/* About */
 .about-background{
   background-image: url(./image/types-of-cake-18-jpg.jpg);
   height: 700px;
@@ -181,4 +167,46 @@ body{
 
 .whatsapp-button:hover {
   background-color: #128c7e; 
+}
+
+/* social mediaIcons */
+.social-media-icons {
+  display: flex;
+  justify-content: center; /* Centers the icons horizontally */
+  align-items: center;
+  gap: 20px; /* Adds space between icons */
+}
+
+.icon {
+  color: #555; /* Default color */
+  transition: color 0.3s ease; /* Smooth transition on hover */
+  text-decoration: none;
+}
+
+.icon:hover {
+  color: #000; /* Change color on hover */
+}
+
+.facebook {
+  color: #3b5998;
+}
+
+.instagram {
+  color: #e4405f;
+}
+
+.whatsapp {
+  color: #25d366;
+}
+
+.icon:hover.facebook {
+  color: #2d4373;
+}
+
+.icon:hover.instagram {
+  color: #d62976;
+}
+
+.icon:hover.whatsapp {
+  color: #128c7e;
 }
