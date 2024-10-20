@@ -70,14 +70,16 @@ export default function NavBar() {
                   </Link>
                 </MenuItem>
                 <MenuItem onClick={handleMenuClose}>
-                  <Link className="nav-link" to="/contact">
-                    Contact Us
+                  <Link to="/cart">
+                    <ShoppingBasketRoundedIcon sx={{ fontSize: 24 }} />
                   </Link>
                 </MenuItem>
               </Menu>
 
               <IconButton>
-                <ShoppingBasketRoundedIcon sx={{ fontSize: 24 }} />
+                <Link to="/cart">
+                  <ShoppingBasketRoundedIcon sx={{ fontSize: 24 }} />
+                </Link>
               </IconButton>
             </Box>
           ) : (
@@ -102,7 +104,9 @@ export default function NavBar() {
                 <InputLabel>Categories</InputLabel>
               </Button>
               <IconButton>
-                <ShoppingBasketRoundedIcon sx={{ fontSize: 24 }} />
+                <Link className="nav-link" to="/cart">
+                  <ShoppingBasketRoundedIcon sx={{ fontSize: 24 }} />
+                </Link>
               </IconButton>
             </Box>
           )}
