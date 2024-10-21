@@ -10,9 +10,8 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import blackForest from "../image/black-forest.jpeg";
 import weddingCake from "../image/wedding-cake.jpeg";
 import graduationCake from "../image/graduation.jpeg";
-// import { IconButton } from "@mui/material";
 
-export default function Products() {
+export default function Products(props) {
   const products = [
     {
       id: 1,
@@ -64,7 +63,8 @@ export default function Products() {
           </CardContent>
           <CardActions sx={{ color: "black" }}>
             <Button
-              
+               onClick={() => props.onAddToCart(product)} 
+               
               sx={{
                 border: "1px solid grey",
                 "&:hover": {

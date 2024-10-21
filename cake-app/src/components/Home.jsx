@@ -7,7 +7,7 @@ import Footer from "./Footer";
 import Products from "./Products";
 import Categories from "./Categories";
 
-export default function Home() {
+export default function Home(props) {
   const categoriesData = [
     { image: blackForest, alt: "Black Forest Cake", title: "Black forest" },
     { image: graduationCake, alt: "Graduation Cake", title: "Graduation Cake" },
@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="home-ciontainer">
+      <div className="main-container">
         <div
           style={{
             display: "flex",
@@ -43,14 +43,14 @@ export default function Home() {
           <div className="categories">
           {categoriesData.map((category, index) => (
               <Categories
-                key={index}
+                // key={index}
                 image={category.image}
                 alt={category.alt}
                 title={category.title}
               />
             ))}
           </div>
-          <Products />
+          <Products onAddToCart={props.onAddToCart}/>
         </div>
       </div>
       <Footer />
