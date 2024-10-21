@@ -16,25 +16,25 @@ export default function Products(props) {
     {
       id: 1,
       name: "Black Forest",
-      price: "KSHs 1,200",
+      price: 1200,
       image: cupCake,
     },
     {
       id: 2,
       name: "wedding",
-      price: "KSHs 1,300",
+      price: 1300,
       image: weddingCake,
     },
     {
       id: 3,
       name: "cup cake",
-      price: "KSHs 1,400",
+      price: 2500,
       image: blackForest,
     },
     {
       id: 3,
       name: "graduation cake",
-      price: "KSHs 1,400",
+      price: 1450,
       image: graduationCake,
     },
   ];
@@ -48,10 +48,12 @@ export default function Products(props) {
         gap: "20px",
         textAlign: "center",
         padding: "20px",
+        backgroundColor:"FFFDF9",
+        borderRadius:10
       }}
     >
       {products.map((product) => (
-        <Card key={product.id} sx={{ width: 300, cursor: "pointer", borderRadius: "10px" }}>
+        <Card key={product.id} sx={{ width: 300, cursor: "pointer", borderRadius: "10px" , }}>
           <CardMedia component="img" alt={product.name} height="280" image={product.image} />
           <CardContent sx={{ textAlign: "left" }}>
             <Typography gutterBottom variant="h5" component="div">
