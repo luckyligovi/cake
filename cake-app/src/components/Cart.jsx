@@ -3,7 +3,14 @@ import { Grid, Typography, Stack, Button, Box } from "@mui/material";
 import { FaWhatsapp } from "react-icons/fa";
 import Footer from "./Footer";
 
-export default function Cart({ cartItems }) {
+export default function Cart({ cartItems, onRemoveFromCart  }) {
+
+    // Handle remove item functionality
+    const handleRemoveItem = (index) => {
+      const updatedCart = cartItems.filter((_, i) => i !== index);
+      onRemoveFromCart(updatedCart);
+    };
+
   // State to manage quantities of items
   const [quantities, setQuantities] = useState(
     cartItems.map(() => 1) // Initialize all quantities to 1
@@ -41,15 +48,15 @@ export default function Cart({ cartItems }) {
         <Grid container spacing={2}>
           <Grid item xs={12} sm={8}>
             {cartItems.map((item, index) => (
-              <Grid container spacing={0} key={index}>
+              <Grid container spacing={1} key={index}sx={{borderBottom:"black 2px solid"}} >
                 <Grid item xs={2}>
                   <img
                     src={item.image}
                     alt={item.name}
-                    style={{ width: "50%", height: "auto" }}
+                    style={{ width: "100px", height: "100px" }}
                   />
                 </Grid>
-                <Grid item xs={7}>
+                <Grid item xs={7} sx={{textAlign:"center", paddingLeft:"20px"}}>
                   <Typography variant="h6">{item.name}</Typography>
                 </Grid>
                 <Grid item xs={3}>
@@ -83,10 +90,19 @@ export default function Cart({ cartItems }) {
                         +
                       </Button>
                     </Stack>
+                    <Button
+                      onClick={() => handleRemoveItem(index)}
+                      variant="outlined"
+                      color="secondary"
+                      sx={{ mt: 1 }}
+                    >
+                      Remove
+                    </Button>
                   </div>
                 </Grid>
-                <hr />
+              
               </Grid>
+              
             ))}
           </Grid>
 

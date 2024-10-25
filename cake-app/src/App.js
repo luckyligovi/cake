@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Home from "./components/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -13,8 +13,26 @@ function App() {
   const [cart, setCart] = useState([]);
   const [alertVisible, setAlertVisible] = useState(false);
 
+  // Retrieve cart from local storage when the component mounts
+  useEffect(() => {
+    const storedCart = localStorage.getItem("cartItems");
+    if (storedCart) {
+      console.log("Retrieved cart from localStorage:", JSON.parse(storedCart));
+      setCart(JSON.parse(storedCart));
+    }
+  }, []);
+
+  // Save cart to local storage whenever the cart state changes
+  useEffect(() => {
+    if (cart.length > 0) { // Save only when there are items in the cart
+      console.log("Saving cart to localStorage:", cart);
+      localStorage.setItem("cartItems", JSON.stringify(cart));
+    }
+  }, [cart]);
+
   const handleAddToCart = (product) => {
-    setCart((prevCart) => [...prevCart, product]);
+    const updatedCart = [...cart, product];
+    setCart(updatedCart);
     setAlertVisible(true);
 
     setTimeout(() => {
@@ -22,22 +40,26 @@ function App() {
     }, 3000);
   };
 
+  const handleRemoveFromCart = (updatedCart) => {
+    setCart(updatedCart);
+  };
+
   return (
     <Router>
       <NavBar />
       {alertVisible && (
         <Alert
-        severity="success"
-        style={{
-          position: "fixed",
-          top: 0,
-          left: "50%",
-          transform: "translateX(-50%)", // Centers the alert horizontally
-          zIndex: 2000, // Ensures it stays on top
-          justifyContent: "center",
-          width: "fit-content", 
-          backgroundColor:" #f5f5f5"
-        }}
+          severity="success"
+          style={{
+            position: "fixed",
+            top: 0,
+            left: "50%",
+            transform: "translateX(-50%)",
+            zIndex: 2000,
+            justifyContent: "center",
+            width: "fit-content",
+            backgroundColor: "#f5f5f5",
+          }}
         >
           Item added to the cart
         </Alert>
@@ -46,7 +68,7 @@ function App() {
         <Route path="/" element={<Home onAddToCart={handleAddToCart} />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/cart" element={<Cart cartItems={cart} />} />
+        <Route path="/cart" element={<Cart cartItems={cart} onRemoveFromCart={handleRemoveFromCart} />} />
       </Routes>
       <WhatsAppButton />
     </Router>
