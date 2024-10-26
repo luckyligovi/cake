@@ -38,6 +38,7 @@ export default function Cart({ cartItems, onRemoveFromCart }) {
     return total + item.price * quantities[index];
   }, 0);
 
+  // order by whats app funcionality
   const generateWhatsAppMessage = () => {
     const message = cartItems
       .map((item, index) => {
@@ -147,7 +148,7 @@ export default function Cart({ cartItems, onRemoveFromCart }) {
             <div
               style={{
                 display: "flex",
-                justifyContent: "center", // Centers the button horizontally
+                justifyContent: "center", 
                 padding: "20px 0",
               }}
             >
