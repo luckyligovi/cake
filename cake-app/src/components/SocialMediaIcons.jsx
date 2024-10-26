@@ -6,7 +6,7 @@ export default function SocialMediaIcons() {
   return (
     <div className="social-media-icons">
     <a
-      href="https://www.facebook.com"
+      href="https://www.facebook.com/Juliescakehouse?mibextid=LQQJ4d"
       target="_blank"
       rel="noopener noreferrer"
       className="icon facebook"
