@@ -9,6 +9,7 @@ import {
   MenuItem,
   Toolbar,
   Typography,
+  Badge,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
@@ -16,7 +17,7 @@ import ShoppingBasketRoundedIcon from "@mui/icons-material/ShoppingBasketRounded
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 
-export default function NavBar() {
+export default function NavBar({cartCount}) {
   const [anchorEl, setAnchorEl] = useState(null);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -77,9 +78,13 @@ export default function NavBar() {
               </Menu>
 
               <IconButton>
-                <Link to="/cart">
+              <Badge
+                  badgeContent={cartCount}
+                  color="secondary"
+                  overlap="rectangular"
+                >
                   <ShoppingBasketRoundedIcon sx={{ fontSize: 24 }} />
-                </Link>
+                </Badge>
               </IconButton>
             </Box>
           ) : (
@@ -104,9 +109,13 @@ export default function NavBar() {
                 <InputLabel>Categories</InputLabel>
               </Button>
               <IconButton>
-                <Link className="nav-link" to="/cart">
+              <Badge
+                  badgeContent={cartCount}
+                  color="secondary"
+                  overlap="rectangular"
+                >
                   <ShoppingBasketRoundedIcon sx={{ fontSize: 24 }} />
-                </Link>
+                </Badge>
               </IconButton>
             </Box>
           )}

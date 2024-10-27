@@ -9,6 +9,7 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import Cart from "./components/Cart";
 import Alert from "@mui/material/Alert";
 
+
 function App() {
   const [cart, setCart] = useState([]);
   const [alertVisible, setAlertVisible] = useState(false);
@@ -46,7 +47,7 @@ function App() {
 
   return (
     <Router>
-      <NavBar />
+      <NavBar cartCount={cart.length} />
       {alertVisible && (
         <Alert
           severity="success"

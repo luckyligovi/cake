@@ -64,7 +64,7 @@ export default function Cart({ cartItems, onRemoveFromCart }) {
                 container
                 spacing={1}
                 key={index}
-                sx={{ borderBottom: "black 2px solid" }}
+                // sx={{ borderBottom: "black 2px solid" }}
               >
                 <Grid item xs={2}>
                   <img
@@ -87,6 +87,7 @@ export default function Cart({ cartItems, onRemoveFromCart }) {
                       <Button
                         onClick={() => handleSubtract(index)} // Subtract functionality
                         sx={{
+                          color: "black",
                           border: "1px solid grey",
                           "&:hover": {
                             backgroundColor: "#f0f0f0",
@@ -101,6 +102,7 @@ export default function Cart({ cartItems, onRemoveFromCart }) {
                       <Button
                         onClick={() => handleAdd(index)} // Add functionality
                         sx={{
+                          color: "black",
                           border: "1px solid grey",
                           "&:hover": {
                             backgroundColor: "#f0f0f0",
@@ -114,8 +116,17 @@ export default function Cart({ cartItems, onRemoveFromCart }) {
                     <Button
                       onClick={() => handleRemoveItem(index)}
                       variant="outlined"
-                      color="secondary"
-                      sx={{ mt: 1 }}
+                      color="white"
+                      sx={{
+                        mt: 2,
+                        mb: 2,
+                        color: "black",
+                        border: "1px solid grey",
+                        "&:hover": {
+                          backgroundColor: "#f0f0f0",
+                          color: "black",
+                        },
+                      }}
                     >
                       Remove
                     </Button>
@@ -148,7 +159,7 @@ export default function Cart({ cartItems, onRemoveFromCart }) {
             <div
               style={{
                 display: "flex",
-                justifyContent: "center", 
+                justifyContent: "center",
                 padding: "20px 0",
               }}
             >
@@ -162,7 +173,7 @@ export default function Cart({ cartItems, onRemoveFromCart }) {
                 }}
               >
                 <a
-                   href={`https://wa.me/+254798645012?text=${generateWhatsAppMessage()}`}
+                  href={`https://wa.me/+254798645012?text=${generateWhatsAppMessage()}`}
                   style={{ color: "white", textDecoration: "none" }}
                 >
                   <div style={{ display: "flex", gap: "10px", width: "100%" }}>
