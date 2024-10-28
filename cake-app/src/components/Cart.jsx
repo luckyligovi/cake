@@ -57,16 +57,20 @@ export default function Cart({ cartItems, onRemoveFromCart }) {
       {cartItems.length === 0 ? (
         <Typography variant="h6">Your cart is empty</Typography>
       ) : (
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={8}>
+        <Grid container spacing={4} >
+          
+          <Grid item xs={12} sm={7}>
             {cartItems.map((item, index) => (
               <Grid
                 container
                 spacing={1}
                 key={index}
-                // sx={{ borderBottom: "black 2px solid" }}
-              >
-                <Grid item xs={2}>
+                mb={4}
+                backgroundColor="white"
+                borderRadius={3}
+            
+               >
+                <Grid item xs={2} sm={2}>
                   <img
                     src={item.image}
                     alt={item.name}
@@ -75,12 +79,12 @@ export default function Cart({ cartItems, onRemoveFromCart }) {
                 </Grid>
                 <Grid
                   item
-                  xs={7}
+                  xs={7} sm={7}
                   sx={{ textAlign: "center", paddingLeft: "20px" }}
                 >
                   <Typography variant="h6">{item.name}</Typography>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={10} sm={3} >
                   <div style={{ display: "flex", flexDirection: "column" }}>
                     <Typography variant="h6">Ksh {item.price}</Typography>
                     <Stack spacing={2} direction="row">
@@ -141,8 +145,10 @@ export default function Cart({ cartItems, onRemoveFromCart }) {
             item
             xs={12}
             sm={4}
-            sx={{ backgroundColor: "#f3f0f0", height: "200px" }}
-          >
+            backgroundColor="white"
+            borderRadius={3}
+            sx={{ height: "200px", mt:0, ml:1 }}
+           >
             <Typography variant="h4">Order Summary</Typography>
 
             <div

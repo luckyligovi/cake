@@ -78,13 +78,11 @@ export default function NavBar({cartCount}) {
               </Menu>
 
               <IconButton>
-              <Badge
-                  badgeContent={cartCount}
-                  color="secondary"
-                  overlap="rectangular"
-                >
+              <Badge badgeContent={cartCount} color="secondary">
+                <Link className="nav-link" to="/cart">
                   <ShoppingBasketRoundedIcon sx={{ fontSize: 24 }} />
-                </Badge>
+                </Link>
+              </Badge>
               </IconButton>
             </Box>
           ) : (
@@ -109,14 +107,12 @@ export default function NavBar({cartCount}) {
                 <InputLabel>Categories</InputLabel>
               </Button>
               <IconButton>
-              <Badge
-                  badgeContent={cartCount}
-                  color="secondary"
-                  overlap="rectangular"
-                >
+              <Badge badgeContent={cartCount} color="secondary">
+                <Link className="nav-link" to="/cart">
                   <ShoppingBasketRoundedIcon sx={{ fontSize: 24 }} />
-                </Badge>
-              </IconButton>
+                </Link>
+              </Badge>
+            </IconButton>
             </Box>
           )}
         </Toolbar>
