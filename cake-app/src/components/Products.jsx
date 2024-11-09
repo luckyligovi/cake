@@ -10,32 +10,37 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import blackForest from "../image/black-forest.jpeg";
 import weddingCake from "../image/wedding-cake.jpeg";
 import graduationCake from "../image/graduation.jpeg";
+import Footer from "./Footer";
 
-export default function Products(props) {
+export default function Products ({ onAddToCart, showFooter = true }) {
   const products = [
     {
       id: 1,
       name: "Black Forest",
       price: 1200,
-      image: cupCake,
+      image: blackForest,
+      description: "ffhslkhabglvgboaqhnp cfqwodtqay lshgpeyh",
     },
     {
       id: 2,
       name: "wedding",
       price: 1300,
       image: weddingCake,
+      description: "white decorated with icing and consisting of more than one layer",
     },
     {
       id: 3,
       name: "cup cake",
       price: 2500,
-      image: blackForest,
+      image: cupCake,
+      description: "A small sweet baked good topped with frosting"
     },
     {
       id: 3,
       name: "graduation cake",
       price: 1450,
       image: graduationCake,
+      description: "ffhslkhabglvgboaqhnp cfqwodtqay lshgpeyh"
     },
   ];
 
@@ -48,25 +53,36 @@ export default function Products(props) {
         gap: "20px",
         textAlign: "center",
         padding: "20px",
-        backgroundColor:"FFFDF9",
-        borderRadius:10
+        backgroundColor: "FFFDF9",
+        borderRadius: 10,
       }}
     >
       {products.map((product) => (
-        <Card key={product.id} sx={{ width: 300, cursor: "pointer", borderRadius: "10px" , }}>
-          <CardMedia component="img" alt={product.name} height="280" image={product.image} />
+        <Card
+          key={product.id}
+          sx={{ width: 300, cursor: "pointer", borderRadius: "10px" }}
+        >
+          <CardMedia
+            component="img"
+            alt={product.name}
+            height="280"
+            image={product.image}
+          />
           <CardContent sx={{ textAlign: "left" }}>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="h4" component="div">
               {product.name}
             </Typography>
+            <Typography gutterBottom variant="h6" component="div">
+              {product.description}
+            </Typography>
+
             <Typography variant="h6" sx={{ color: "text.secondary" }}>
-              {product.price}
+              Ksh {product.price}
             </Typography>
           </CardContent>
           <CardActions sx={{ color: "black" }}>
             <Button
-               onClick={() => props.onAddToCart(product)} 
-               
+              onClick={() => onAddToCart(product)}
               sx={{
                 border: "1px solid grey",
                 "&:hover": {

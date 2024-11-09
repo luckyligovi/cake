@@ -9,7 +9,7 @@ export default function About() {
       <div className="about-background">
         <h1>ABOUT US</h1>
       </div>
-      <div className="infor-container">
+      {/* <div className="infor-container">
         <img
           src={cakeTypes}
           alt="cake-types"
@@ -22,7 +22,7 @@ export default function About() {
             repellendus?
           </p>
         </div>
-      </div>
+      </div> */}
       <Offers />
       <Footer />
     </div>

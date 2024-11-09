@@ -7,12 +7,12 @@ import Footer from "./Footer";
 import Products from "./Products";
 import Categories from "./Categories";
 
-export default function Home(props) {
+export default function Home({ onAddToCart }) {  // Added destructuring for onAddToCart here
   const categoriesData = [
-    { image: blackForest, alt: "Black Forest Cake", title: "Black forest" },
-    { image: graduationCake, alt: "Graduation Cake", title: "Graduation Cake" },
-    { image: cupCake, alt: "Cup Cake", title: "Cup Cake" },
-    { image: weddingCake, alt: "Wedding Cake", title: "Wedding" },
+    { image: blackForest, alt: "Black Forest Cake", title: "Classic Cakes" },
+    { image: graduationCake, alt: "Graduation Cake", title: "Cheesecakes" },
+    { image: cupCake, alt: "Cup Cake", title: "Specialty Cakes" },
+    { image: weddingCake, alt: "Wedding Cake", title: "Mini & Individual Cakes" },
   ];
 
   return (
@@ -41,17 +41,20 @@ export default function Home(props) {
         <div className="category-container">
           <h1 style={{ marginBottom: "50px" }}>POPULAR CATEGORIES</h1>
           <div className="categories">
-          {categoriesData.map((category, index) => (
+            {categoriesData.map((category, index) => (
               <Categories
-                // key={index}
+                key={index}  // Added a unique key here
                 image={category.image}
                 alt={category.alt}
                 title={category.title}
               />
             ))}
           </div>
-          <Products onAddToCart={props.onAddToCart}/>
+          <h2>Some of our products</h2>
+          <Products onAddToCart={onAddToCart}  showFooter={false}  />  {/* Uncommented this line */}
         </div>
+        <h2>New arrivals</h2>
+        <Products onAddToCart={onAddToCart}  showFooter={false} />
       </div>
       <Footer />
     </div>

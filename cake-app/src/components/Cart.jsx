@@ -4,6 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import Footer from "./Footer";
 
 export default function Cart({ cartItems, onRemoveFromCart }) {
+  console.log(`>>>${cartItems}`)
   // Handle remove item functionality
   const handleRemoveItem = (index) => {
     const updatedCart = cartItems.filter((_, i) => i !== index);
@@ -68,6 +69,7 @@ export default function Cart({ cartItems, onRemoveFromCart }) {
                 mb={4}
                 backgroundColor="white"
                 borderRadius={3}
+                justifyContent={"space-around"}
             
                >
                 <Grid item xs={2} sm={2}>
@@ -80,9 +82,10 @@ export default function Cart({ cartItems, onRemoveFromCart }) {
                 <Grid
                   item
                   xs={7} sm={7}
-                  sx={{ textAlign: "center", paddingLeft: "20px" }}
+                  sx={{ textAlign: "center", paddingLeft: "20px",  }}
                 >
-                  <Typography variant="h6">{item.name}</Typography>
+                  <Typography variant="h5">{item.name}</Typography>
+                  <Typography variant="h6">{item.description}</Typography>
                 </Grid>
                 <Grid item xs={10} sm={3} >
                   <div style={{ display: "flex", flexDirection: "column" }}>

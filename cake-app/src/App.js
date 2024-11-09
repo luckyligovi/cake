@@ -8,6 +8,8 @@ import NavBar from "./components/NavBar";
 import WhatsAppButton from "./components/WhatsAppButton";
 import Cart from "./components/Cart";
 import Alert from "@mui/material/Alert";
+import Products from "./components/Products";
+import Categories from "./components/Categories";
 
 
 function App() {
@@ -18,7 +20,7 @@ function App() {
   useEffect(() => {
     const storedCart = localStorage.getItem("cartItems");
     if (storedCart) {
-      console.log("Retrieved cart from localStorage:", JSON.parse(storedCart));
+      // console.log("Retrieved cart from localStorage:", JSON.parse(storedCart));
       setCart(JSON.parse(storedCart));
     }
   }, []);
@@ -26,7 +28,7 @@ function App() {
   // Save cart to local storage whenever the cart state changes
   useEffect(() => {
     if (cart.length > 0) { // Save only when there are items in the cart
-      console.log("Saving cart to localStorage:", cart);
+      // console.log("Saving cart to localStorage:", cart);
       localStorage.setItem("cartItems", JSON.stringify(cart));
     }
   }, [cart]);
@@ -66,10 +68,15 @@ function App() {
         </Alert>
       )}
       <Routes>
+        
         <Route path="/" element={<Home onAddToCart={handleAddToCart} />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart cartItems={cart} onRemoveFromCart={handleRemoveFromCart} />} />
+        <Route
+          path="/category/:categoryName"
+          element={<Categories onAddToCart={handleAddToCart} />}
+        />
       </Routes>
       <WhatsAppButton />
     </Router>
