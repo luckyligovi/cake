@@ -1,16 +1,11 @@
 import React from "react";
-import Products from "./Products";
-import Footer from "./Footer";
 
-export default function Categories() {
+export default function Categories(props) {
+  console.log(props)
   return (
-    <div className="main-container">
-        {/* <div className="categories-background">
-        <h1>Categories</h1>
-      </div> */}
-      <h1>categories</h1>
-      <Products/>
-      <Footer/>
+    <div>
+      <img className="category-images" src={props.image} alt={props.alt} style={{ cursor: "pointer" }} />
+      <h3>{props.title}</h3>
     </div>
 
   );

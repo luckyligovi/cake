@@ -10,9 +10,8 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import blackForest from "../image/black-forest.jpeg";
 import weddingCake from "../image/wedding-cake.jpeg";
 import graduationCake from "../image/graduation.jpeg";
-import Footer from "./Footer";
 
-export default function Products ({ onAddToCart, showFooter = true }) {
+export default function Products({ onAddToCart }) {
   const products = [
     {
       id: 1,
@@ -26,21 +25,22 @@ export default function Products ({ onAddToCart, showFooter = true }) {
       name: "wedding",
       price: 1300,
       image: weddingCake,
-      description: "white decorated with icing and consisting of more than one layer",
+      description:
+        "white decorated with icing and consisting of more than one layer",
     },
     {
       id: 3,
       name: "cup cake",
       price: 2500,
       image: cupCake,
-      description: "A small sweet baked good topped with frosting"
+      description: "A small sweet baked good topped with frosting",
     },
     {
       id: 3,
       name: "graduation cake",
       price: 1450,
       image: graduationCake,
-      description: "ffhslkhabglvgboaqhnp cfqwodtqay lshgpeyh"
+      description: "ffhslkhabglvgboaqhnp cfqwodtqay lshgpeyh",
     },
   ];
 
@@ -60,7 +60,14 @@ export default function Products ({ onAddToCart, showFooter = true }) {
       {products.map((product) => (
         <Card
           key={product.id}
-          sx={{ width: 300, cursor: "pointer", borderRadius: "10px" }}
+          sx={{
+            width: 300,
+            cursor: "pointer",
+            borderRadius: "10px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+          }}
         >
           <CardMedia
             component="img"
@@ -80,10 +87,11 @@ export default function Products ({ onAddToCart, showFooter = true }) {
               Ksh {product.price}
             </Typography>
           </CardContent>
-          <CardActions sx={{ color: "black" }}>
+          <CardActions sx={{ color: "black", mt: "auto" }}>
             <Button
               onClick={() => onAddToCart(product)}
               sx={{
+                width: "100%",
                 border: "1px solid grey",
                 "&:hover": {
                   backgroundColor: "#f0f0f0",

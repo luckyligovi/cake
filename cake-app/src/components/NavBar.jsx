@@ -75,7 +75,10 @@ export default function NavBar({ cartCount }) {
           <Typography variant="h6">Cake-house</Typography>
         </Link>
 
+       
+
         {isMobile ? (
+          // mobile
           <Box sx={{ display: "flex", alignItems: "center", gap: "20px" }}>
             <IconButton
               edge="start"
@@ -91,6 +94,20 @@ export default function NavBar({ cartCount }) {
               open={Boolean(anchorEl)}
               onClose={handleMenuClose}
             >
+             <MenuItem   onClick={handleCategoryClick}>Categories</MenuItem>
+            <Menu
+              anchorEl={categoryAnchorEl}
+              open={Boolean(categoryAnchorEl)}
+              onClose={handleCategoryClose}
+            >
+              {categories.map((category) => (
+                <MenuItem key={category.name} onClick={handleCategoryClose}>
+                  <Link className="nav-link" to={category.path}>
+                    {category.name}
+                  </Link>
+                </MenuItem>
+              ))}
+            </Menu>
               <MenuItem onClick={handleMenuClose}>
                 <Link className="nav-link" to="/">
                   Home
@@ -102,7 +119,7 @@ export default function NavBar({ cartCount }) {
                 </Link>
               </MenuItem>
               <MenuItem onClick={handleMenuClose}>
-                <Link to="/cart">
+                <Link className="nav-link" to="/cart">
                   <ShoppingBasketRoundedIcon sx={{ fontSize: 24 }} />
                 </Link>
               </MenuItem>
@@ -117,6 +134,7 @@ export default function NavBar({ cartCount }) {
             </IconButton>
           </Box>
         ) : (
+          // desktop
           <Box sx={{ display: "flex", gap: "20px" }}>
             <Button>
               <Link className="nav-link" to="/">
@@ -133,7 +151,7 @@ export default function NavBar({ cartCount }) {
                 Contact Us
               </Link>
             </Button>
-            <Button onClick={handleCategoryClick}>Categories</Button>
+            <Button className="nav-link" color="black" onClick={handleCategoryClick}>Categories</Button>
             <Menu
               anchorEl={categoryAnchorEl}
               open={Boolean(categoryAnchorEl)}

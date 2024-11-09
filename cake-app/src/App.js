@@ -9,7 +9,8 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import Cart from "./components/Cart";
 import Alert from "@mui/material/Alert";
 import Products from "./components/Products";
-import Categories from "./components/Categories";
+import CakeCategories from "./components/CakeCategories";
+
 
 
 function App() {
@@ -75,7 +76,7 @@ function App() {
         <Route path="/cart" element={<Cart cartItems={cart} onRemoveFromCart={handleRemoveFromCart} />} />
         <Route
           path="/category/:categoryName"
-          element={<Categories onAddToCart={handleAddToCart} />}
+          element={<CakeCategories onAddToCart={handleAddToCart} />}
         />
       </Routes>
       <WhatsAppButton />
