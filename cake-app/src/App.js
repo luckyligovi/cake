@@ -8,7 +8,6 @@ import NavBar from "./components/NavBar";
 import WhatsAppButton from "./components/WhatsAppButton";
 import Cart from "./components/Cart";
 import Alert from "@mui/material/Alert";
-import Products from "./components/Products";
 import CakeCategories from "./components/CakeCategories";
 
 
