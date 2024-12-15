@@ -14,10 +14,7 @@ export default function Footer() {
         <div className="company-info">
           <img src={logo} alt="logo" width={60} />
           <p style={{maxWidth:"500px"}}>
-            We aimed to offer Nairobi smokers with alternatives. Our brand
-            presents top-tier devices sourced globally, a 
-            delectable array of flavors, a distinct customer service approach,
-            all at an exceptionally friendly price point.
+          We aim to delight Nairobi cake lovers with unforgettable experiences. Our brand offers expertly crafted cakes, a variety of indulgent flavors, personalized designs for every occasion, and a customer-focused service approach—all at an affordable price.
           </p>
         </div>
 
