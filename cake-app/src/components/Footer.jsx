@@ -1,7 +1,9 @@
 import React from "react";
-import cakeLogo from "../image/cake-logo.jpeg";
 import { Link } from "react-router-dom";
 import SocialMediaIcons from "./SocialMediaIcons";
+import logo from "../image/cake_house_logo.png"
+
+
 
 export default function Footer() {
   return (
@@ -10,7 +12,7 @@ export default function Footer() {
       <SocialMediaIcons/>
       <div className="footer">
         <div className="company-info">
-          <img src={cakeLogo} alt="logo" />
+          <img src={logo} alt="logo" width={60} />
           <p style={{maxWidth:"500px"}}>
             We aimed to offer Nairobi smokers with alternatives. Our brand
             presents top-tier devices sourced globally, a 

@@ -48,7 +48,7 @@ export default function Products({ onAddToCart }) {
     <div
       style={{
         display: "flex",
-        justifyContent: "flex-start",
+        justifyContent: "center",
         flexWrap: "wrap",
         gap: "20px",
         textAlign: "center",
