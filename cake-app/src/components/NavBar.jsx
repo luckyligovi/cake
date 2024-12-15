@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logo from "../image/cake_house_logo.png"
 import {
   AppBar,
   Box,
@@ -72,7 +73,8 @@ export default function NavBar({ cartCount }) {
         }}
       >
         <Link className="nav-link" to="/">
-          <Typography variant="h6">Cake-house</Typography>
+          {/* <Typography variant="h6">Cake-house</Typography> */}
+          {/* <img src={logo} alt="cake" /> */}
         </Link>
 
        
