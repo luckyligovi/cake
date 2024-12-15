@@ -74,7 +74,7 @@ export default function NavBar({ cartCount }) {
       >
         <Link className="nav-link" to="/">
           {/* <Typography variant="h6">Cake-house</Typography> */}
-          {/* <img src={logo} alt="cake" /> */}
+          <img src={logo} alt="cake" width={60}/>
         </Link>
 
        
